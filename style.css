@@ -11,6 +11,20 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+header {
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: #800080;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 header {
@@ -67,11 +81,8 @@ blockquote {
     color: #555;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+.quotes-full {
+    grid-column: 1 / -1;
 }
 
 .gallery img {
@@ -109,6 +120,8 @@ ol {
 @media (max-width: 768px) {
     .container {
         padding: 10px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     h1 {
         font-size: 2em;
